@@ -1,84 +1,23 @@
 <script>
-// import Tools from './AngryShell/src/tools';
-// import Tools from 'tools$';
 import t from 't';
 export default {
   async onLaunch(args) {
-    // console.log(`###$onLaunch####`);
-    // console.log(args);
+
     let { query, } = args
-    // let scene = decodeURIComponent(query.scene)
-    // let csztrade_id = scene.split('=')[1]
-    // console.log(csztrade_id);
-    // await t.setItem('csztrade_id',csztrade_id)
-    // let user = await t.login_sync({
-    //   type: 'hmbb/open'
-    // })
-    // await t.setItem('user',user)
+
   },
   async created(query) {
-    // let user = await this.syncLogin()
-    // t.toast('ot')
-    // console.log(`###$wx.login####`);
-    // let wxacode = await Tools.getWxacodeunlimit({user_id,})
-    // console.log(`###$1####`);
-    // Tools.toast('fine')
-    // console.log(typeOf(tools$));
-    // console.log(tools$);
-    // console.log(res);
-    // wx.authorize({ scope: "scope.userInfo" })
 
-    // wx.getUserInfo({
-    //   success(res) {
-    //     console.log(res);
-    //   }
-    // })
-    // wx.getSetting({
-    //   success(res) {
-    //     console.log(res);
-    //     if (res.authSetting['scope.userInfo']) {
-    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称
-    //       wx.getUserInfo({
-    //         success(res) {
-    //           console.log(res.userInfo)
-    //         }
-    //       })
-    //     }
-    //   }
-    // })
-    // console.log(Tools);
-    // Tools.toast('test')
-    // // 调用API从本地缓存中获取数据
-    // const logs = wx.getStorageSync('logs') || []
-    // logs.unshift(Date.now())
-    // wx.setStorageSync('logs', logs)
-
-    // console.log('app created and cache logs by setStorageSync')
   },
 
   methods: {
-    // async syncLogin() {
-    //   let user = await t.login_sync({
-    //     type: 'csz/open'
-    //   })
-    //   let { data_quanmao, wx_userInfo, } = user
-    //   // console.log(data_quanmao);
-    //   // data_quanmao = JSON.parse(data_quanmao)
-    //   let userInfo = JSON.parse(wx_userInfo)
-    //   // await t.setItem('data_quanmao', data_quanmao)
-    //   await t.setItem('userInfo', userInfo)
-    //   // let session_key = data_quanmao.session_key
-    //   // let user_id = user.id
-    //   return user
-    // },
+
   },
 }
 
 </script>
 <style lang="less" src='AngryShell/less/global.less'></style>
 <style lang="less">
-// @import 'AngryShell/less/global'
-
 page{
   background-color: #ececec;
 }
