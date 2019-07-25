@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "领取红包",
+
+
+  "usingComponents":
+  {
+    "van-tag": "/static/vant/tag/index",
+    "van-dialog": "/static/vant/dialog/index",
+    "van-popup": "/static/vant/popup/index",
+    "van-field": "/static/vant/field/index"
+  }
+}

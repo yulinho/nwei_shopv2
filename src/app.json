@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/hmbbhuomas/main"
+
+  ],
+  "permission":
+  {
+    "scope.userLocation":
+    {
+      "desc": "为给您推荐更合适的券，需获取您的位置"
+    }
+  },
+  "window":
+  {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ad3735",
+    "navigationBarTitleText": "Hmbb",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar":
+  {
+    "color": "#a9b7b7",
+    "selectedColor": "#ad3735",
+    "borderStyle": "black",
+    "list": [
+    {
+      "pagePath": "pages/index/main",
+      "iconPath": "static/images/home.png",
+      "selectedIconPath": "static/images/home-actived.png",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/hmbbhuomas/main",
+      "iconPath": "static/images/profile.png",
+      "selectedIconPath": "static/images/profile-actived.png",
+      "text": "我的"
+    }]
+  }
+}
