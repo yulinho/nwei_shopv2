@@ -1,9 +1,0 @@
-{
-
-  "usingComponents":
-  {
-    "van-field": "/static/vant/field/index",
-    "van-tag": "/static/vant/tag/index"
-
-  }
-}

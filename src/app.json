@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/hmbbhuomas/main"
+    "pages/my/main"
 
   ],
   "permission":
@@ -31,7 +31,7 @@
       "text": "首页"
     },
     {
-      "pagePath": "pages/hmbbhuomas/main",
+      "pagePath": "pages/my/main",
       "iconPath": "static/images/profile.png",
       "selectedIconPath": "static/images/profile-actived.png",
       "text": "我的"

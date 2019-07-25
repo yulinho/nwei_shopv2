@@ -20,7 +20,7 @@ export default {
   computed: {},
   async onReady(e) {},
   async onShow() {
-    // t.toast('show')
+    t.toast('show2')
   },
   methods: {
     async onShow() {},

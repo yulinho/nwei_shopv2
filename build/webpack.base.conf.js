@@ -45,12 +45,11 @@ let baseWebpackConfig = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      // 'tools$': '@/../AngryShell/src/tools',
       'vue': 'mpvue',
       '@': resolve('src'),
       // 'Tools':resolve('@/../../AngryShell/src/tools')
-      't':resolve('src/AngryShell/src/tools'),
-      'AngryShell':resolve('src/AngryShell')
+      't':resolve('src/common/tools'),
+      'common':resolve('src/common')
     },
     symlinks: false,
     aliasFields: ['mpvue', 'weapp', 'browser'],

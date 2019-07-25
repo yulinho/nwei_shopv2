@@ -1,8 +1,0 @@
-{
-
-  "navigationBarTitleText": "分享",
-  "usingComponents":
-  {
-    "van-popup": "/static/vant/popup/index"
-  }
-}

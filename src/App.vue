@@ -2,27 +2,18 @@
 import t from 't';
 export default {
   async onLaunch(args) {
-
     let { query, } = args
-
   },
   async created(query) {
-
   },
-
   methods: {
-
   },
 }
-
 </script>
-<style lang="less" src='AngryShell/less/global.less'></style>
 <style lang="less">
 page{
   background-color: #ececec;
 }
-
-
 @font-face {
   font-family: 'iconfont';  /* project id 1067139 */
   src: url('//at.alicdn.com/t/font_1067139_p386bp52qgj.eot');
