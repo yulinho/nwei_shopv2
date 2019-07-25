@@ -1,8 +1,9 @@
 {
-  "navigationBarTitleText": "活码宝宝",
+  "navigationBarTitleText": "恩为商城",
 
   "usingComponents":
   {
-    "van-icon": "/static/vant/icon/index"
+    "van-search": "/static/vant/search/index"
+
   }
 }
