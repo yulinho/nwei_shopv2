@@ -1,7 +1,6 @@
 <template>
   <div class="main_cls">
     <div class="main_cls">
-
     </div>
     <div class="is-no-record">
       <span>暂无纪录</span>
@@ -48,7 +47,7 @@ export default {
   methods: {
     async onclickitem(item) {
       // t.toast('onclickitem')
-      await t.setItem('product',item)
+      await t.setItem('product', item)
       t.open({
         url: '/pages/item/main'
       })
@@ -57,7 +56,7 @@ export default {
     async onclickget() {
       t.toast('onclickget')
     },
-    async fetchProductOrder(){
+    async fetchProductOrder() {
       let res_products = await t.v2dispatch({
         type: `v2chuqidanopen`,
         payload: {
@@ -86,7 +85,5 @@ export default {
 }
 
 .main_cls {}
-
-
 
 </style>
