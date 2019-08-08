@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      products: [],
+      orders: [],
       items: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
       q: ``,
       userInfo: {},
@@ -69,7 +69,8 @@ export default {
         },
       })
       let { data } = res_products
-      console.log(data);
+      // console.log(data);
+      ctx.orders = data
       // ctx.products = data
     },
   },
