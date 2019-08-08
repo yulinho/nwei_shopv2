@@ -3,8 +3,8 @@
 
 运行预览：
 
-![Alt text](screenshots/1.png){:width="320"}
-![Alt text](screenshots/2.png){:width="320"}
-![Alt text](screenshots/3.png){:width="320"}
-![Alt text](screenshots/4.png){:width="320"}
+![Alt text](screenshots/1.png){:height="100" width="100"}
+![Alt text](screenshots/2.png){:height="100" width="100"}
+![Alt text](screenshots/3.png){:height="100" width="100"}
+![Alt text](screenshots/4.png){:height="100" width="100"}
 
