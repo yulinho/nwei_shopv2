@@ -2,7 +2,7 @@
   <div class="main_cls">
     <div class="main_cls">
     </div>
-    <div class="is-no-record">
+    <div class="is-no-record" v-if="orders.length==0">
       <span>暂无纪录</span>
     </div>
   </div>
