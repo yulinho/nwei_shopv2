@@ -1,4 +1,4 @@
-# nwei_shopv2 [![GitHub license](https://github.com/yulinho/nwei_shopv2/
+# nwei_shopv2 [![GitHub license](https://github.com/yulinho/nwei_shopv2/)]
 
 
 ## Archiving
