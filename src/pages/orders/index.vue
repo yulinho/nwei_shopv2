@@ -65,7 +65,7 @@ export default {
         payload: {
           // chuqidanitem__id: `chuqidanitem__id`,
           chuqidanuser__id: user__id,
-          nsp: `chuqidanorders_get`
+          nsp: `orders_get`
         },
       })
       let { data } = res_products
