@@ -10,6 +10,7 @@
 </template>
 <script>
 // import card from '@/components/card'
+import order from 'common/order'
 import t from 't'
 let ctx
 // import asList from '../../AngryShell/src/list';
