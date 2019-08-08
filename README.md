@@ -20,7 +20,7 @@ under coding..
 <!-- [![Demo Video](https://j.gifs.com/gJymG9.gif)](https://youtu.be/EatiYGFxBxY) -->
 
 运行预览：
-![Alt text](screenshots/1.png | width=320)
+![Alt text](https://hz.heyulin.com/public/tinypng/5d4bd27511353b692f3b30f2-headimg-15652502488090.11512763314748264-tiny.png | width=320)
 ![Alt text](screenshots/2.png | width=320)
 ![Alt text](screenshots/3.png | width=320)
 ![Alt text](screenshots/4.png | width=320)
