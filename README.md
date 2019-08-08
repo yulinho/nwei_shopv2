@@ -45,9 +45,8 @@ Have fun!
 
 
 运行预览：
-
-![Alt text](screenshots/1.png| width=320)
-![Alt text](screenshots/2.png| width=320)
-![Alt text](screenshots/3.png| width=320)
-![Alt text](screenshots/4.png| width=320)
+![Alt text](screenshots/1.png | width=320)
+![Alt text](screenshots/2.png | width=320)
+![Alt text](screenshots/3.png | width=320)
+![Alt text](screenshots/4.png | width=320)
 
