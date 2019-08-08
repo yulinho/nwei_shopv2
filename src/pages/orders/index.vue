@@ -32,7 +32,7 @@ export default {
   async onReady(e) {},
   async onShow() {
     ctx = this
-    // await ctx.fetchProducts()
+    await ctx.fetchOrders()
     // t.toast('show2')
     // this.onShow()
 
@@ -57,8 +57,7 @@ export default {
     async onclickget() {
       t.toast('onclickget')
     },
-    async fetchProducts() {
-      console.log(`###$fetchProducts####`);
+    async fetchProductOrder     console.log(`###$fetchProductOrder;
       let res_products = await t.v2dispatch({
         type: `v2chuqidanopen`,
         payload: {
