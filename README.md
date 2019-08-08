@@ -22,9 +22,13 @@ under coding..
 
 运行预览：
   - <img src="screenshots/1.png"  width="320" />
+  - 
   - <img src="screenshots/2.png"  width="320" />
+  - 
   - <img src="screenshots/3.png"  width="320" />
+  - 
   - <img src="screenshots/4.png"  width="320" />
+  - 
 
 ## Getting Started
 To get the project set up just run by command:
