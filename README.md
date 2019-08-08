@@ -21,8 +21,10 @@ under coding..
 
 
 运行预览：
-  - <img src="https://hz.heyulin.com/public/tinypng/5d4bd27511353b692f3b30f2-headimg-15652502488090.11512763314748264-tiny.png"  width="320" />
+  - <img src="screenshots/1.png"  width="320" />
   - <img src="screenshots/2.png"  width="320" />
+  - <img src="screenshots/3.png"  width="320" />
+  - <img src="screenshots/4.png"  width="320" />
 
 ## Getting Started
 To get the project set up just run by command:
