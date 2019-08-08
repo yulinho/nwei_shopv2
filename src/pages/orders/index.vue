@@ -57,6 +57,7 @@ export default {
       t.toast('onclickget')
     },
     async fetchProductOrder() {
+      console.log(`###$fetchProductOrder####`);
       let res_products = await t.v2dispatch({
         type: `v2chuqidanopen`,
         payload: {
