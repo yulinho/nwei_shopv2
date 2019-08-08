@@ -58,11 +58,13 @@ export default {
     },
     async fetchOrders() {
       console.log(`###$fetchProductOrder####`);
+      let user = await t.getItem('user')
+      let user__id = user._id
       let res_products = await t.v2dispatch({
         type: `v2chuqidanopen`,
         payload: {
           // chuqidanitem__id: `chuqidanitem__id`,
-          // chuqidanuser__id: user__id,
+          chuqidanuser__id: user__id,
           nsp: `chuqidanorders_get`
         },
       })
