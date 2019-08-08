@@ -67,8 +67,8 @@ export default {
         },
       })
       let { data } = res_products
-      // console.log(data);
-      ctx.products = data
+      console.log(data);
+      // ctx.products = data
     },
   },
   async onLoad(query) {},
