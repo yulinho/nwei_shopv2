@@ -1,52 +1,69 @@
 <template>
   <div class="main_class">
-    <div class="main_info_class">
-      <div class="main_info_item_class">
-        <div>
-          育儿
-        </div>
-        <div>
-          0.0
-        </div>
-        <div>
-          <button @click="" size="mini">充值</button>
-        </div>
+    <div v-if="!user.phone" class="main_authplease_class">
+      <!--       <img class="main_authplease_logo_class">
+
+      </img> -->
+      <open-data type="userAvatarUrl" class="main_authplease_logo_class"></open-data>
+      <div class="main_authplease_nick_class">
+        <open-data type="userNickName"></open-data>
       </div>
-      <div class="main_info_item_class">
-        <image class="main_info_item_headimg_class" src="http://img48.86pla.com/1/20180524/636627902164997450144.jpg"></image>
-        <div class="main_info_item_nick_class">nick</div>
-        <!-- <div class="main_info_item_level_class">level</div> -->
-        <button open-type="getUserInfo" size="mini" lang="zh_CN" @getuserinfo="onRefreshUserinfo">Login
-        </button>
-      </div>
-      <div class="main_info_item_class">
-        <div>
-          积分
-        </div>
-        <div>
-          0.0
-        </div>
-      </div>
+      <div class="main_authplease_tips_class">手机号码快速注册登录</div>
+      <!-- <button type="primary" open-type="getPhoneNumber">点击授权登录</button> -->
+      <button type="primary" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">一键登录</button>
     </div>
-    <div class="main_myorder_class">
-      <span class="iconfont">&#xe6ef;</span>查看我的订单
-    </div>
-    <div class="main_myorderstatus_class">
-      <div class="main_myorderstatus_item_class">
-        <imgitem :args="imgitemargs"></imgitem>
+    <div v-if="user.phone">
+      <div class="main_info_class">
+        <div class="main_info_item_class" v-if="false">
+          <div>
+            余额
+          </div>
+          <div>
+            0.0
+          </div>
+          <div>
+            <button @click="" size="mini">充值</button>
+          </div>
+        </div>
+        <div class="main_info_item_class">
+          <image class="main_info_item_headimg_class" :src="user.headimg" v-if="user.headimg"></image>
+          <button class="main_info_item_nick_class is-plain-button" lang="zh_CN" open-type="getUserInfo" @getuserinfo="onRefreshUserinfo">{{user.nick}}</button>
+          <!-- <div class="main_info_item_level_class">level</div> -->
+          <div v-if="!user.headimg" class="main_authplease_tips_class">点击获取您的公开信息（昵称、头像、性别等）</div>
+          <button v-if="!user.headimg" open-type="getUserInfo" size="mini" type="primary" lang="zh_CN" @getuserinfo="onRefreshUserinfo">显示头像昵称
+          </button>
+        </div>
+        <div class="main_info_item_class" v-if="false">
+          <div>
+            积分
+          </div>
+          <div>
+            0.0
+          </div>
+        </div>
       </div>
-      <div class="main_myorderstatus_item_class">
-        <imgitem :args="imgitemargs"></imgitem>
+      <div class="main_myorder_class" v-if="false">
+        <span class="iconfont">&#xe6ef;</span>查看我的订单
       </div>
-      <div class="main_myorderstatus_item_class">
-        <imgitem :args="imgitemargs"></imgitem>
+      <div class="main_myorderstatus_class" v-if="false">
+        <div class="main_myorderstatus_item_class">
+          <imgitem :args="imgitemargs"></imgitem>
+        </div>
+        <div class="main_myorderstatus_item_class">
+          <imgitem :args="imgitemargs"></imgitem>
+        </div>
+        <div class="main_myorderstatus_item_class">
+          <imgitem :args="imgitemargs"></imgitem>
+        </div>
+        <div class="main_myorderstatus_item_class">
+          <imgitem :args="imgitemargs"></imgitem>
+        </div>
       </div>
-      <div class="main_myorderstatus_item_class">
-        <imgitem :args="imgitemargs"></imgitem>
+      <div class="main_listitem_class">
+        <listitem @click="onclickmyorders" :args="{title:'我的订单',icon:'&#xe617;'}"></listitem>
+        <listitem @click="onclickmyadress" :args="{title:'收货地址管理',subtitle:user.wxAddress?'已设置':'未设置',icon:'&#xe60d;'}"></listitem>
+        <listitem @click="onclickabout" :args="{title:'关于我们',subtitle:'v1.0.4',icon:'&#xe6a8;',noarrow:true,islast:true}"></listitem>
       </div>
-    </div>
-    <div class="main_listitem_class">
-      <listitem :args="listitemargs" />
     </div>
   </div>
 </template>
@@ -55,6 +72,7 @@
 import t from 't'
 import imgitem from 'common/imgitem'
 import listitem from 'common/listitem'
+let ctx
 // import asList from '../../AngryShell/src/list';
 export default {
   components: {
@@ -64,57 +82,111 @@ export default {
   },
   data() {
     return {
+      user: {},
+      isAuth: false,
       userInfo: {},
       imgitemargs: { title: `待付款`, img: `&#xe6ef;` },
-      listitemargs: {
-        items: [{
-          title: '收货地址管理',
-          icon: 'heart',
-          subtitle: '',
-          onClickCb: () => {
-            // console.log(`###$onClickCb####`);
-            // t.copy(this.inviter)
-            t.toast('已复制到剪贴板')
-            // var url = "../../pages/trades/main"
-            // wx.navigateTo({ url })
-            // console.log(wx);
-          }
-        }, {
-          title: '会员资料管理',
-          icon: 'about',
-          // subtitle: 'v1.2.0',
-          onClickCb: () => {
-            // console.log(`###$onClickCb####`);
-            // var url = "../../pages/trades/main"
-            // wx.navigateTo({ url })
-            // console.log(wx);
-          }
-        }, {
-          title: '关于我们',
-          icon: 'about',
-          subtitle: 'v1.2.0',
-          onClickCb: () => {
-            // console.log(`###$onClickCb####`);
-            // var url = "../../pages/trades/main"
-            // wx.navigateTo({ url })
-            // console.log(wx);
-          }
-        }]
-      },
     }
   },
 
   computed: {},
   async onReady(e) {},
   async onShow() {
-    t.toast('show2')
+    // t.toast('show2')
+    ctx.user = await t.getItem('user')
   },
   methods: {
+    async onclickmyadress() {
+      let user = await t.getItem('user')
+      let user__id = user._id
+      wx.chooseAddress({
+        async success(res) {
+          let res_setted = await t.v2dispatch({
+            type: `v2chuqidanopen`,
+            payload: {
+              // chuqidanitem__id: `chuqidanitem__id`,
+              // chuqidanuser__id: user__id,
+              user__id: user__id,
+              detail: res,
+              nsp: `chooseAddressOk`
+            },
+          })
+          if (res_setted.user) {
+            await t.setItem('user', res_setted.user)
+            ctx.user = res_setted.user
+          }
+          // console.log(res.userName)
+          // console.log(res.postalCode)
+          // console.log(res.provinceName)
+          // console.log(res.cityName)
+          // console.log(res.countyName)
+          // console.log(res.detailInfo)
+          // console.log(res.nationalCode)
+          // console.log(res.telNumber)
+        }
+      })
+    },
+    async onclickabout() {
+      // t.open({
+      //   url: '/pages/orders/main'
+      // })
+    },
+    async onclickmyorders() {
+      t.open({
+        url: '/pages/orders/main'
+      })
+    },
+    async postPhone(args) {
+      let { detail } = args
+      let user = await t.getItem('user')
+      let user__id = user._id
+      // console.log(detail);
+      let res = await t.v2dispatch({
+        type: `v2chuqidanopen`,
+        payload: {
+          // chuqidanitem__id: `chuqidanitem__id`,
+          // chuqidanuser__id: user__id,
+          user__id: user__id,
+          detail,
+          nsp: `getPhoneNumberOk`
+        },
+      })
+      // let {newuser} = res
+      if (res.user) {
+        await t.setItem('user', res.user)
+        ctx.user = res.user
+      }
+    },
+    getPhoneNumber(e) {
+      // console.log(e);
+      // console.log('result' + e.detail.encryptedData)
+      let detail = e.mp.detail
+      this.postPhone({
+        detail,
+      })
+      // let { user } = res_products
+    },
     async onRefreshUserinfo(data) {
+      console.log(data);
       let { mp, } = data
       let { detail, } = mp
       let { userInfo, } = detail
       console.log(userInfo);
+      let user = await t.getItem('user')
+      let user__id = user._id
+      let res = await t.v2dispatch({
+        type: `v2chuqidanopen`,
+        payload: {
+          // chuqidanitem__id: `chuqidanitem__id`,
+          // chuqidanuser__id: user__id,
+          user__id: user__id,
+          userInfo,
+          nsp: `getUserInfoOk`
+        },
+      })
+      // let {data} = res
+      await t.setItem('user', res.data)
+      ctx.user = res.data
 
     },
     async onShow() {},
@@ -132,18 +204,54 @@ export default {
 .main_class {
   flex: 1;
   min-height: 100vh;
-  background-color: pink;
+  /*background-color: pink;*/
+}
+
+.main_authplease_class {
+  /*background-color: blue;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 750rpx;
+  flex-direction: column;
+  background-color: white;
+}
+
+.main_authplease_nick_class {
+
+  margin-bottom: 10rpx;
+  /*color: gray;*/
+  font-size: 28rpx;
+}
+
+.main_authplease_logo_class {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+  background-color: orange;
+  margin: 20rpx;
+  overflow: hidden;
+}
+
+.main_authplease_tips_class {
+  margin: 20rpx;
+  color: gray;
+  font-size: 24rpx;
 }
 
 .main_info_class {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   width: 750rpx;
   padding-top: 40rpx;
   padding-bottom: 40rpx;
+  margin-bottom: 10rpx;
   /*height: 375rpx;*/
-  background-color: green;
+  background-color: white;
 }
 
 .main_myorder_class {
@@ -168,7 +276,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 250rpx;
+  /*width: 250rpx;*/
   color: white;
   /*height: 250rpx;*/
   /*background-color: red;*/
@@ -184,7 +292,7 @@ export default {
 
 .main_info_item_nick_class {
   margin-bottom: 10rpx;
-  color: white;
+  color: #1b1b1b;
 }
 
 </style>

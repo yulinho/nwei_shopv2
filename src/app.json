@@ -1,7 +1,10 @@
 {
   "pages": [
+    "pages/index/main",
     "pages/my/main",
-    "pages/index/main"
+    "pages/orders/main",
+    "pages/item/main",
+    "pages/free/main"
   ],
   "permission":
   {

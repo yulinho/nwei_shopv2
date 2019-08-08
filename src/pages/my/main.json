@@ -3,6 +3,5 @@
 
   "usingComponents":
   {
-    "van-icon": "/static/vant/icon/index"
   }
 }

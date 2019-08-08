@@ -1,9 +1,8 @@
 {
-  "navigationBarTitleText": "恩为商城",
+  "navigationBarTitleText": "首页",
 
   "usingComponents":
   {
-    "van-search": "/static/vant/search/index"
 
   }
 }

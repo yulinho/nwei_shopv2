@@ -4,29 +4,48 @@ export default {
   async onLaunch(args) {
     let { query, } = args
   },
-  async created(query) {
-  },
-  methods: {
-  },
+  async created(query) {},
+  methods: {},
 }
+
 </script>
 <style lang="less">
-page{
+page {
   background-color: #ececec;
 }
-@font-face {
-  font-family: 'iconfont';  /* project id 1316788 */
-  src: url('//at.alicdn.com/t/font_1316788_nw86ses8hx9.eot');
-  src: url('//at.alicdn.com/t/font_1316788_nw86ses8hx9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1316788_nw86ses8hx9.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1316788_nw86ses8hx9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1316788_nw86ses8hx9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1316788_nw86ses8hx9.svg#iconfont') format('svg');
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
 }
+
+/* this rule will be remove */
+* {
+  transition: width 2s;
+  -moz-transition: width 2s;
+  -webkit-transition: width 2s;
+  -o-transition: width 2s;
+}
+@font-face {
+  font-family: 'iconfont';
+  /* project id 1316788 */
+  src: url('//at.alicdn.com/t/font_1332581_plu7dgbkt2.eot');
+  src: url('//at.alicdn.com/t/font_1332581_plu7dgbkt2.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1332581_plu7dgbkt2.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1332581_plu7dgbkt2.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1332581_plu7dgbkt2.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1332581_plu7dgbkt2.svg#iconfont') format('svg');
+}
+
 .iconfont {
   font-family: iconfont;
   // color: black;
 }
+
 .iconfont-order::before {
   content: '\e6ef';
 }
@@ -34,6 +53,46 @@ page{
 .iconfont {
   font-family: iconfont;
 }
+
+.is-money {
+  color: #ff7300;
+}
+
+.is-size-7 {
+  font-size: 20rpx;
+}
+
+.is-size-6 {
+  font-size: 22rpx;
+}
+
+.is-size-5 {
+  font-size: 24rpx;
+}
+
+.is-size-4 {
+  font-size: 26rpx;
+}
+
+.is-size-3 {
+  font-size: 28rpx;
+}
+
+.is-size-2 {
+  font-size: 30rpx;
+}
+
+.is-size-1 {
+  font-size: 32rpx;
+}
+
+.is-center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
 .weui-loading-content {
   position: fixed;
   top: 0;
@@ -94,6 +153,22 @@ page{
   color: white !important;
 }
 
+.is-plain-button {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0rpx;
+  background-color: transparent;
+  // line-height: 35rpx;
+
+}
+
+.is-plain-button::after {
+  border: 0;
+}
+
 /*.weui-search-bar__label{
   display: none !important;
 }*/
@@ -114,5 +189,51 @@ page{
   -webkit-transition: width 2s;
   -o-transition: width 2s;
 }
-
+.is-no-record{
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx;
+  color: gray;
+  font-size: 28rpx;
+}
+.is-main_touchbar_ls {
+  height: 60rpx;
+  width: 750rpx;
+}
+.is-main_ctrlbar_ls {
+  width: 750rpx;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.is-main_ctrlbar_content_ls {
+  width: 750rpx;
+  height: 120rpx;
+  background-color: white;
+  flex-direction: row;
+  display: flex;
+}
+.is-main_ctrlbar_content_icon_ls {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: white;
+  flex-direction: column;
+  line-height: 35rpx;
+}
+.is-main_ctrlbar_content_button2_ls {
+  /*padding-top: 20rpx;*/
+  flex: 1;
+  flex-direction: column;
+  background-color: #dd302d;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  line-height: 40rpx;
+  color: white;
+  border-radius: 0;
+  padding: 0;
+}
 </style>
