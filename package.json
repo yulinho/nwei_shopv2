@@ -6,7 +6,7 @@
   "author": "Blake",
   "private": true,
   "scripts": {
-    "git": "git add -A&&git commit -m 一周工作80小时s以上",
+    "git": "git add -A&&git commit -m 一周工作80小时s以上&&git push --set-upstream origin master",
     "dev:wx": "node build/dev-server.js wx",
     "start:wx": "npm run dev:wx",
     "build:wx": "node build/build.js wx",
