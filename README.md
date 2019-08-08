@@ -17,7 +17,13 @@ under coding..
 ## Features
  * power by Mpvue
 
-[![Demo Video](https://j.gifs.com/gJymG9.gif)](https://youtu.be/EatiYGFxBxY)
+<!-- [![Demo Video](https://j.gifs.com/gJymG9.gif)](https://youtu.be/EatiYGFxBxY) -->
+
+运行预览：
+![Alt text](screenshots/1.png | width=320)
+![Alt text](screenshots/2.png | width=320)
+![Alt text](screenshots/3.png | width=320)
+![Alt text](screenshots/4.png | width=320)
 
 ## Getting Started
 To get the project set up just run by command:
@@ -44,9 +50,4 @@ Have fun!
 
 
 
-运行预览：
-![Alt text](screenshots/1.png | width=320)
-![Alt text](screenshots/2.png | width=320)
-![Alt text](screenshots/3.png | width=320)
-![Alt text](screenshots/4.png | width=320)
 
