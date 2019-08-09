@@ -141,7 +141,7 @@ export default {
   /*width: 200rpx;*/
   /*margin: 20rpx;*/
   height: 200rpx;
-  background-color: blue;
+  /*background-color: blue;*/
   display: flex;
   flex-direction: row;
 }
@@ -150,7 +150,7 @@ export default {
   height: 200rpx;
 }
 .main_product_content_des_cls{
-  background-color: pink;
+  /*background-color: pink;*/
   flex: 1;
 }
 .main_product_content_des_title_cls{
@@ -167,7 +167,7 @@ export default {
 .main_product_content_des_title_1_cls{
   flex: 1;
   display: inline-block;
-  background-color: blue;
+  /*background-color: blue;*/
 }
 .main_content_cls {
   /*background-color: blue;*/
