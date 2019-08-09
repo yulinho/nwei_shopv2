@@ -34,6 +34,7 @@ wx.getSystemInfo({
         }
       })
     }
+    console.log(`###$isNeedWxLogin####`,isNeedWxLogin);
     if (isNeedWxLogin) {
       wx.login({
         async success(res) {
