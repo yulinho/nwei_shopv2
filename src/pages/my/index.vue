@@ -132,6 +132,11 @@ export default {
       //   url: '/pages/orders/main'
       // })
     },
+    async onclicktransactions(){
+      t.open({
+        url: '/pages/transactions/main'
+      })
+    },
     async onclickmyorders() {
       t.open({
         url: '/pages/orders/main'
