@@ -91,7 +91,7 @@ export default {
                 }
           })
         }
-        if (foo.zhuliing=='待支付') {
+        if (foo.Zhuliing=='待支付') {
           buttons.push({
                 title: '支付',
                 type: `primary`,
