@@ -14,7 +14,7 @@
         <span v-if="!args.noarrow">&#xe6db;</span>
       </div>
       <div class="main_content_status_cls">
-        <span class="main_content_status_span_cls">{{args.status}}</span>
+        <span class="main_content_status_span_cls">{{args.statusShow}}</span>
       </div>
     </div>
     <div class="main_marginer_cls" style="height: 1rpx;">
