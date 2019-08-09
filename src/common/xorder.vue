@@ -14,7 +14,7 @@
         <span v-if="!args.noarrow">&#xe6db;</span>
       </div>
       <div class="main_content_status_cls">
-        <span>代收货</span>
+        <span class="main_content_status_span_cls">代收货</span>
       </div>
     </div>
     <div class="main_marginer_cls" style="height: 1rpx;">
@@ -241,5 +241,8 @@ export default {
   flex: 1;
   margin-right: 20rpx;
 
+}
+.main_content_status_span_cls{
+  color: #b66b58;
 }
 </style>
