@@ -143,6 +143,7 @@ export default {
   height: 200rpx;
   background-color: blue;
   display: flex;
+  flex: 1;
   flex-direction: row;
 }
 .main_product_content_image_cls{
