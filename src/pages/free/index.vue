@@ -210,6 +210,7 @@ export default {
     // console.log(`url携带的参数为: ${JSON.stringify(options)}`)
     let user = await t.getItem(`user`)
     let { order__id } = options
+    ctx.order__id = order__id
     let res_ordegetr = await t.v2dispatch({
       type: `v2chuqidanopen`,
       payload: {
