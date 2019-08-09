@@ -137,6 +137,7 @@ export default {
       console.log(`###$sleeping wait the user infomation####`);
       await t.sleep(1000)
     }
+    console.log(`###$user ok####`,user);
     await ctx.refreshOrder({
       user
     })
