@@ -107,7 +107,7 @@ export default {
           })
           foo.topbutton = {
             title:  `马山助力`,
-            type: `waring`,
+            type: `warn`,
             click: ()=>{
               t.toast('且力助')
             }
