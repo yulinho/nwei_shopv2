@@ -154,7 +154,7 @@ const Tools = {
     } else {
       message = typeof(arg1)
     }
-    wx.showToast({
+    wx.showModal({
       title: message,
       // icon,
       duration,
