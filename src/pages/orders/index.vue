@@ -1,7 +1,7 @@
 <template>
   <div class="main_cls">
     <div class="main_cls" v-if="orders.length>0">
-      <xorder :args="item" v-for="(item,index) in orders" :key="index"></xorder>
+      <xorder :args="{...item}" v-for="(item,index) in orders" :key="index"></xorder>
     </div>
     <div class="is-no-record" v-if="orders.length==0">
       <span>暂无纪录</span>
@@ -72,7 +72,10 @@ export default {
       })
       let { data } = res_products
       // console.log(data);
-      ctx.orders = data
+      for (let foo of data) {
+          ctx.orders.push(foo)
+      }
+      
       // ctx.products = data
     },
   },
