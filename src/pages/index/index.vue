@@ -134,7 +134,8 @@ export default {
   /*width: 750rpx;*/
   /*height: 60rpx;*/
   /*padding-left: 20rpx;*/
-  padding: 20rpx;
+  padding: 15rpx;
+  color: red;
   /*background-color: green;*/
 }
 
