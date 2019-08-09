@@ -32,7 +32,7 @@
       
     </div>
     <div class="main_navis_cls">
-      <button>查看物流</button><button>支付</button>
+      <button size="mini">查看物流</button><button size="mini">支付</button>
     </div>
     <div class="main_marginer_cls" style="height: 15rpx;">
       
