@@ -138,7 +138,7 @@ export default {
   /*height: 60rpx;*/
   /*padding-left: 20rpx;*/
   padding: 8rpx 15rpx;
-  color: red;
+  color: #fc625d;
   /*background-color: green;*/
 }
 
