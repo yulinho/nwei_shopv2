@@ -86,7 +86,7 @@ export default {
                 title: '支付',
                 type: `primary`,
                 click: ()=>{
-                  t.toast('支付')
+                  t.toast(`${支付}${foo.title}`)
                 }
               }
             ]
