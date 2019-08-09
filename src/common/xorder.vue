@@ -97,6 +97,7 @@ export default {
 }
 .main_postfee_cls{
   padding: 20rpx;
+  text-align: right;
 }
 .main_product_content_cls{
   /*width: 200rpx;*/
