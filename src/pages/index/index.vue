@@ -7,7 +7,7 @@
       <image class="main_slider_image_ls" src="http://qiniu.heyulin.cn/h5baisongde_topbanner2_tiny.png"></image>
     </div>
     <div class="main_bulltin_ls">
-      <span>公告: 自己免费领，别人领您有奖励。查看说明</span>
+      <span>公告: 自己免费领，别人领您有奖励。查看活动说明。</span>
     </div>
     <div class="main_blocks_ls" v-if="false">
       <div class="main_blocks_item_ls" v-for="(item,index) in products" :key="index">
