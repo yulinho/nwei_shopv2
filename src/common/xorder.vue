@@ -27,6 +27,9 @@
           <div class="main_product_content_des_title_cls">
             <span>title</span><span>price</span>
           </div>
+          <div class="main_product_content_des_subtitle_cls">
+            
+          </div>
         </div>
       </div>
     </div>
