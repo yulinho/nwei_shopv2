@@ -158,7 +158,7 @@ const Tools = {
       title: message,
       // icon,
       duration,
-      icon: ‘success‘,
+      icon: `success`
     })
   },
   toast: async (arg1, args) => {
