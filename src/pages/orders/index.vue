@@ -17,7 +17,7 @@ let ctx
 export default {
   components: {
     // asList,
-    xorder, 
+    xorder,
   },
   data() {
     return {
@@ -74,38 +74,41 @@ export default {
       // console.log(data);
       for (let foo of data) {
         let buttons = []
-        if (foo.status=='Sent') {
+        if (foo.status == 'Sent') {
           buttons.push({
-                title: '查看物流',
-                click: ()=>{
-                  // t.toast(`物流${foo.title}`)
-                }
+            title: '查看物流',
+            click: () => {
+              // t.toast(`物流${foo.title}`)
+            }
           })
         }
-        if (foo.status=='Waitpay') {
+        if (foo.status == 'Waitpay') {
           buttons.push({
-                title: '支付',
-                type: `primary`,
-                click: ()=>{
-                  t.toast(`支付${foo.title}`)
-                }
+            title: '支付',
+            type: `primary`,
+            click: () => {
+              t.toast(`支付${foo.title}`)
+            }
           })
         }
-        if (foo.status=='Zhuliing') {
+        if (foo.status == 'Zhuliing') {
           buttons.push({
-                title: '查看助力情况',
-                type: `primary`,
-                click: ()=>{
-                  // t.toast(`查看助力情况${foo.title}`)
-                }
+            title: '查看助力情况',
+            type: `primary`,
+            click: () => {
+              t.open({
+                url: '/pages/free/main'
+              })
+              // t.toast(`查看助力情况${foo.title}`)
+            }
           })
         }
-          ctx.orders.push({
-            ...foo,
-            buttons:buttons
-          })
+        ctx.orders.push({
+          ...foo,
+          buttons: buttons
+        })
       }
-      
+
       // ctx.products = data
     },
   },
