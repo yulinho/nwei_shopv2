@@ -28,7 +28,7 @@
             <span class="main_product_content_des_title_1_cls">{{args.title}}</span><span>{{args.dealprice}}</span>
           </div>
           <div class="main_product_content_des_subtitle_cls">
-            <span class="main_product_content_des_subtitle_1_cls">subtitle</span><span>x1</span>
+            <span class="main_product_content_des_subtitle_1_cls">{{args.subtitle}}</span><span>{{args.cnt}}</span>
           </div>
         </div>
       </div>
