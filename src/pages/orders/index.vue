@@ -84,13 +84,11 @@ export default {
         }
         if (foo.statusFE=='待支付') {
           buttons.push({
-              {
                 title: '支付',
                 type: `primary`,
                 click: ()=>{
                   t.toast(`支付${foo.title}`)
                 }
-              }
           })
         }
           ctx.orders.push({
