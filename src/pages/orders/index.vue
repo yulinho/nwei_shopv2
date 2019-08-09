@@ -74,7 +74,7 @@ export default {
       // console.log(data);
       for (let foo of data) {
         let buttons = []
-        if (foo.statusFE=='已发货') {
+        if (foo.Sent=='已发货') {
           buttons.push({
                 title: '查看物流',
                 click: ()=>{
@@ -82,7 +82,16 @@ export default {
                 }
           })
         }
-        if (foo.statusFE=='待支付') {
+        if (foo.Waitpay=='待支付') {
+          buttons.push({
+                title: '支付',
+                type: `primary`,
+                click: ()=>{
+                  t.toast(`支付${foo.title}`)
+                }
+          })
+        }
+        if (foo.zhuliing=='待支付') {
           buttons.push({
                 title: '支付',
                 type: `primary`,
