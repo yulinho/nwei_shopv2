@@ -88,7 +88,12 @@ export default {
             title: '支付',
             type: `primary`,
             click: () => {
-              t.toast(`支付${foo.title}`)
+              // t.toast(`支付${foo.title}`)
+              if (!user.wxAddress) {
+
+              }else{
+                t.toast('支付接口申请中，敬请期待')
+              }
             }
           })
         }
