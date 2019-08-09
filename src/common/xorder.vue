@@ -155,6 +155,7 @@ export default {
 }
 .main_product_content_des_title_cls{
   flex: 1;
+  display: flex;
 }
 .main_product_content_des_subtitle_cls{
   color: gray;
