@@ -129,7 +129,7 @@ export default {
   /*background-color: blue;*/
   margin-left: 20rpx;
   margin-top: 10rpx;
-  border-bottom: 1rpx solid #e7e7e7;
+  /*border-bottom: 1rpx solid #e7e7e7;*/
   flex-direction: row;
   display: flex;
   align-items: center;
