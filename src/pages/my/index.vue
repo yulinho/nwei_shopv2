@@ -63,7 +63,7 @@
         <xlistitem @click="onclickmyorders" :args="{title:'我的订单',icon:'&#xe617;'}"></xlistitem>
         <xlistitem @click="onclicktransactions" :args="{title:'我的奖励',icon:'&#xe681;'}"></xlistitem>
         <xlistitem @click="onclickmyadress" :args="{title:'收货地址管理',subtitle:user.wxAddress?'已设置':'未设置',icon:'&#xe60d;'}"></xlistitem>
-        <xlistitem @click="onclickabout" :args="{title:'关于我们',subtitle:'v1.0.4',icon:'&#xe6a8;',noarrow:true,islast:true}"></xlistitem>
+        <xlistitem @click="onclickabout" :args="{title:'关于我们',subtitle:'v1.0.9',icon:'&#xe6a8;',noarrow:true,islast:true}"></xlistitem>
       </div>
     </div>
   </div>
