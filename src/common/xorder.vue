@@ -162,6 +162,7 @@ export default {
 .main_product_content_des_title_1_cls{
   flex: 1;
   display: inline-block;
+  background-color: blue;
 }
 .main_content_cls {
   /*background-color: blue;*/
