@@ -58,7 +58,7 @@ export default {
     async onclickget() {
       t.toast('onclickget')
     },
-    async paysubmit(){
+    async paysubmit(args){
       t.toast(`支付接口申请中，敬请期待`)
     },
     async fetchOrders() {
