@@ -249,6 +249,7 @@ export default {
     async onShow() {},
   },
   async onLoad(options) {
+    ctx = this
     // console.log(`url携带的参数为: ${JSON.stringify(options)}`)
     let user = await t.getItem(`user`)
     let { order__id } = options
