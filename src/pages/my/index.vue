@@ -59,10 +59,10 @@
           <imgitem :args="imgitemargs"></imgitem>
         </div>
       </div>
-      <div class="main_listitem_class">
-        <listitem @click="onclickmyorders" :args="{title:'我的订单',icon:'&#xe617;'}"></listitem>
-        <listitem @click="onclickmyadress" :args="{title:'收货地址管理',subtitle:user.wxAddress?'已设置':'未设置',icon:'&#xe60d;'}"></listitem>
-        <listitem @click="onclickabout" :args="{title:'关于我们',subtitle:'v1.0.4',icon:'&#xe6a8;',noarrow:true,islast:true}"></listitem>
+      <div class="main_xlistitem_class">
+        <xlistitem @click="onclickmyorders" :args="{title:'我的订单',icon:'&#xe617;'}"></xlistitem>
+        <xlistitem @click="onclickmyadress" :args="{title:'收货地址管理',subtitle:user.wxAddress?'已设置':'未设置',icon:'&#xe60d;'}"></xlistitem>
+        <xlistitem @click="onclickabout" :args="{title:'关于我们',subtitle:'v1.0.4',icon:'&#xe6a8;',noarrow:true,islast:true}"></xlistitem>
       </div>
     </div>
   </div>
@@ -71,14 +71,14 @@
 // import card from '@/components/card'
 import t from 't'
 import imgitem from 'common/imgitem'
-import listitem from 'common/listitem'
+import xlistitem from 'common/xlistitem'
 let ctx
 // import asList from '../../AngryShell/src/list';
 export default {
   components: {
     // asList,
     imgitem,
-    listitem,
+    xlistitem,
   },
   data() {
     return {
