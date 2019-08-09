@@ -245,6 +245,9 @@ export default {
   margin-right: 20rpx;
 
 }
+.main_content_topbutton_cls{
+  margin-right: 20rpx;
+}
 .main_content_status_span_cls{
   color: #b66b58;
 }
