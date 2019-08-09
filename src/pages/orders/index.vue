@@ -72,6 +72,7 @@ export default {
       })
       let { data } = res_products
       // console.log(data);
+      ctx.orders = []
       for (let foo of data) {
         let buttons = []
         if (foo.status == 'Sent') {
