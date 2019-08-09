@@ -28,7 +28,7 @@
     <div class="main_navis_cls">
       
     </div>
-    <div class="main_marginer_cls">
+    <div class="main_marginer_cls" style="height: 15rpx;">
       
     </div>
   </div>
@@ -110,7 +110,7 @@ export default {
   /*margin-bottom: 15rpx;*/
 }
 .main_marginer_cls{
-  height: 15rpx;
+  /*height: 15rpx;*/
   background-color: #f5f6f7;
 }
 .main_product_content_cls{
