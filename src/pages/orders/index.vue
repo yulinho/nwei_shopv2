@@ -93,10 +93,10 @@ export default {
         }
         if (foo.status=='Zhuliing') {
           buttons.push({
-                title: '支付',
+                title: '查看助力情况',
                 type: `primary`,
                 click: ()=>{
-                  t.toast(`支付${foo.title}`)
+                  // t.toast(`查看助力情况${foo.title}`)
                 }
           })
         }
