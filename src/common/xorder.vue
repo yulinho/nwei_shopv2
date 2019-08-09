@@ -35,7 +35,7 @@
       
     </div>
     <div class="main_marginer_cls" style="height: 15rpx;">
-      <button>查看物流</button>
+      <button>查看物流</button><button>支付</button>
     </div>
   </div>
 </template>
