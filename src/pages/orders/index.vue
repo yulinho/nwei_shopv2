@@ -105,6 +105,12 @@ export default {
               // t.toast(`查看助力情况${foo.title}`)
             }
           })
+          foo.topbutton = {
+            title:  `马山助力`,
+            click: ()=>{
+              t.toast('且力助')
+            }
+          }
         }
         ctx.orders.push({
           ...foo,
