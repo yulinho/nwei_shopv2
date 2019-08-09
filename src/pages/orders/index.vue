@@ -98,7 +98,7 @@ export default {
             type: `primary`,
             click: () => {
               t.open({
-                url: `/pages/free/main?order__id=5d4bca55f89ef24280f4c146=${order__id}`
+                url: `/pages/free/main?order__id=${order__id}`
               })
               // t.toast(`查看助力情况${foo.title}`)
             }
