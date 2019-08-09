@@ -170,6 +170,7 @@ export default {
   justify-content: center;
   text-align: right;
   flex: 1;
+  margin-right: 20rpx;
 
 }
 </style>
