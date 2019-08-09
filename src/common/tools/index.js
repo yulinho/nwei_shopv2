@@ -3,7 +3,11 @@ const dateFormat = 'YYYY-MM-DD';
 const Tools = {
   sleep: async (args) => {
     return new Promise(async (resolve) => {
-      
+      setTimeout(function() {
+        resolve({
+          success: true,
+        })
+      }, args) 
     })
   },
   fetch: async (args) => {
