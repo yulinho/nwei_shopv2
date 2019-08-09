@@ -3,6 +3,7 @@ import t from 't';
 export default {
   async onLaunch(args) {
     let { query, } = args
+    console.log(`###$query####`,query);
   },
   async created(query) {},
   methods: {},
