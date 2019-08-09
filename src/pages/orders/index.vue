@@ -90,8 +90,35 @@ export default {
             click: () => {
               // t.toast(`支付${foo.title}`)
               if (!user.wxAddress) {
-                
-              }else{
+                let user__id = user._id
+                wx.chooseAddress({
+                  async success(res) {
+                    let res_setted = await t.v2dispatch({
+                      type: `v2chuqidanopen`,
+                      payload: {
+                        // chuqidanitem__id: `chuqidanitem__id`,
+                        // chuqidanuser__id: user__id,
+                        user__id: user__id,
+                        detail: res,
+                        nsp: `chooseAddressOk`
+                      },
+                    })
+                    if (res_setted.user) {
+                      await t.setItem('user', res_setted.user)
+                      // ctx.user = res_setted.user
+                      t.toast('支付接口申请中，敬请期待')
+                    }
+                    // console.log(res.userName)
+                    // console.log(res.postalCode)
+                    // console.log(res.provinceName)
+                    // console.log(res.cityName)
+                    // console.log(res.countyName)
+                    // console.log(res.detailInfo)
+                    // console.log(res.nationalCode)
+                    // console.log(res.telNumber)
+                  }
+                })
+              } else {
                 t.toast('支付接口申请中，敬请期待')
               }
             }
@@ -111,9 +138,9 @@ export default {
             }
           })
           foo.topbutton = {
-            title:  `马山助力`,
+            title: `马山助力`,
             type: `warn`,
-            click: ()=>{
+            click: () => {
               t.open({
                 url: `/pages/free/main?order__id=${order__id}`
               })
