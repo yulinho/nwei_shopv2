@@ -28,7 +28,7 @@
             <span>title</span><span>price</span>
           </div>
           <div class="main_product_content_des_subtitle_cls">
-            
+            subtitle
           </div>
         </div>
       </div>
