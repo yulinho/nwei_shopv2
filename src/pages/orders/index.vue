@@ -74,7 +74,7 @@ export default {
       // console.log(data);
       for (let foo of data) {
         let buttons = []
-        if (foo.Sent=='已发货') {
+        if (foo.status=='Sent') {
           buttons.push({
                 title: '查看物流',
                 click: ()=>{
@@ -82,7 +82,7 @@ export default {
                 }
           })
         }
-        if (foo.Waitpay=='待支付') {
+        if (foo.status=='Waitpay') {
           buttons.push({
                 title: '支付',
                 type: `primary`,
@@ -91,7 +91,7 @@ export default {
                 }
           })
         }
-        if (foo.Zhuliing=='待支付') {
+        if (foo.status=='Zhuliing') {
           buttons.push({
                 title: '支付',
                 type: `primary`,
