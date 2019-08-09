@@ -157,8 +157,8 @@ const Tools = {
     wx.showModal({
       title: message,
       // icon,
-      duration,
-      icon: `success`
+      // duration,
+      // icon: `success`
     })
   },
   toast: async (arg1, args) => {
