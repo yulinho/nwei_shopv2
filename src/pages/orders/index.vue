@@ -73,6 +73,18 @@ export default {
       let { data } = res_products
       // console.log(data);
       for (let foo of data) {
+        let buttons = []
+        if (foo.status.FE=='待支付') {
+          buttons.push({
+              {
+                title: '支付',
+                type: `primary`,
+                click: ()=>{
+                  t.toast(`支付${foo.title}`)
+                }
+              }
+          })
+        }
           ctx.orders.push({
             ...foo,
             buttons:[
@@ -82,13 +94,6 @@ export default {
                   t.toast('查看物流')
                 }
               },
-              {
-                title: '支付',
-                type: `primary`,
-                click: ()=>{
-                  t.toast(`支付${foo.title}`)
-                }
-              }
             ]
           })
       }
