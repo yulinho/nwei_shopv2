@@ -31,7 +31,7 @@ under coding..
   - 
   - <img src="screenshots/4.png"  width="320" />
   - 
-  - <img src="screenshots/6.jpg"  width="320" />
+  - <img src="screenshots/5.jpg"  width="320" />
   - 
 
 ## Getting Started
