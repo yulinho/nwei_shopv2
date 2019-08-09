@@ -1,7 +1,7 @@
 <template>
   <div class="main_cls">
     <div class="main_cls" v-if="orders.length>0">
-      <order :args="{}"></order>
+      <xorder :args="{}"></xorder>
     </div>
     <div class="is-no-record" v-if="orders.length==0">
       <span>暂无纪录</span>
@@ -10,14 +10,14 @@
 </template>
 <script>
 // import card from '@/components/card'
-import order from 'common/order'
+import xorder from 'common/xorder'
 import t from 't'
 let ctx
 // import asList from '../../AngryShell/src/list';
 export default {
   components: {
     // asList,
-
+    xorder, 
   },
   data() {
     return {
