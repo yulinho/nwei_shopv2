@@ -118,6 +118,7 @@ export default {
   align-items: center;
   display: flex;
   justify-content: center;
+  text-align: right;
 }
 .main_marginer_cls{
   /*height: 15rpx;*/
