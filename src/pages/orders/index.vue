@@ -97,8 +97,7 @@ export default {
         }
           ctx.orders.push({
             ...foo,
-            buttons:[
-            ]
+            buttons:buttons
           })
       }
       
