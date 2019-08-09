@@ -93,7 +93,7 @@ export default {
         }
         if (foo.status == 'Zhuliing') {
           let order__id = foo._id
-          await t.setItem('order__id',order__id)
+          // await t.setItem('order__id',order__id)
           buttons.push({
             title: '查看助力情况',
             type: `primary`,
