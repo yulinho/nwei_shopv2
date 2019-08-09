@@ -153,7 +153,7 @@ export default {
   onShareAppMessage(result) {
     let order__id = ctx.order__id
     let sharetofreepath = `/pages/free/main?order__id=${order__id}`
-    let title = `急急急！帮我助力一下0元购，就差你了，谢谢你，爱你哟！${order__id}`
+    let title = `急急急！帮我助力一下0元购，就差你了，谢谢你，爱你哟`
     // let title = sharetofreepath
     if (result.from === 'button') {
       // this.billId = 'billId-' + new Date().getTime()
