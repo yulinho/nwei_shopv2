@@ -145,7 +145,7 @@ export default {
   height: 200rpx;
 }
 .main_product_content_des_cls{
-  background-color: red;
+  background-color: pink;
 }
 .main_content_cls {
   /*background-color: blue;*/
