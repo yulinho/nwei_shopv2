@@ -115,6 +115,9 @@ export default {
   margin-top: 1px;
   /*margin-bottom: 15rpx;*/
 }
+.main_navis_cls{
+  flex-direction: row;
+}
 .main_marginer_cls{
   /*height: 15rpx;*/
   background-color: #f5f6f7;
