@@ -141,6 +141,26 @@ const Tools = {
     })
     wx.navigateBack(args)
   },
+  alert: async (arg1, args) => {
+    args || (args = {})
+    let { duration, icon } = args
+    icon || (icon = 'none')
+    duration || (duration = 2000)
+    let message = 'unknow'
+    if (typeof(arg1) === 'string' || typeof(arg1) === 'number' || typeof(arg1) === 'boolean') {
+      message = arg1
+    } else if (typeof(arg1) === 'object') {
+      message = JSON.stringify(arg1)
+    } else {
+      message = typeof(arg1)
+    }
+    wx.showToast({
+      title: message,
+      // icon,
+      duration,
+      icon: ‘success‘,
+    })
+  },
   toast: async (arg1, args) => {
     args || (args = {})
     let { duration, icon } = args
