@@ -40,8 +40,7 @@
       
     </div>
     <div class="main_navis_cls">
-      <button class="main_navis_button_cls" size="mini">查看物流</button>
-      <button class="main_navis_button_cls" type="primary" size="mini">支付</button>
+      <button class="main_navis_button_cls" size="mini" v-for="(item,index) in args.buttons" :key="index">查看物流</button>
     </div>
     <div class="main_marginer_cls" style="height: 15rpx;">
       
