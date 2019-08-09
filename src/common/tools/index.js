@@ -157,6 +157,7 @@ const Tools = {
     wx.showModal({
       title: '提示',
       content: message,
+      showCancel: false
       // icon,
       // duration,
       // icon: `success`
