@@ -142,6 +142,7 @@ export default {
   /*margin: 20rpx;*/
   height: 200rpx;
   background-color: blue;
+  display: flex;
   flex-direction: row;
 }
 .main_product_content_image_cls{
