@@ -213,36 +213,6 @@ export default {
     let user = await t.getItem(`user`)
     let { order__id } = options
     ctx.order__id = order__id
-    let res_ordegetr = await t.v2dispatch({
-      type: `v2chuqidanopen`,
-      payload: {
-        localuser: user,
-        chuqidanorder__id: order__id,
-        nsp: `order_get`
-      },
-    })
-    let chuqidanorder = res_ordegetr.data
-    let { chuqidanuser__id } = chuqidanorder
-    ctx.chuqidanorder = chuqidanorder
-    ctx.helped_cnt = chuqidanorder.helpers.length
-    ctx.helpstatus = chuqidanorder.helpstatus
-    ctx.helpers = chuqidanorder.helpers
-
-    let product = res_ordegetr.product
-    console.log(product);
-    await t.setItem('product', product)
-    ctx.product = product
-
-    // console.log(chuqidanorder);
-    // t.toast(user._id);
-    // console.log(chuqidanuser__id);
-    if (`${user._id}` == chuqidanuser__id) {
-      //自己订单
-      ctx.ownerorder = true
-    } else {
-      //帮别人加速
-      ctx.ownerorder = false
-    }
   },
   async created() {
     ctx = this
