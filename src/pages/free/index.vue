@@ -39,7 +39,7 @@
             <image class="main_content_inner_zhuli_recordslist_item_image_ls" src="http://qiniu.heyulin.cn/who.png"></image>
             <div class="is-size-4 main_content_inner_zhuli_recordslist_item_title_ls">
               <span v-if="!item.nick">匿名好友</span>
-              <span v-if="item.nick">item.nick</span>
+              <span v-if="item.nick">{{item.nick}}</span>
             </div>
             <div class="is-size-4">
               成功助力了一下！
