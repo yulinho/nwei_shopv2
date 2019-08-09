@@ -92,12 +92,13 @@ export default {
           })
         }
         if (foo.status == 'Zhuliing') {
+          let order__id = data._id
           buttons.push({
             title: '查看助力情况',
             type: `primary`,
             click: () => {
               t.open({
-                url: '/pages/free/main'
+                url: `/pages/free/main?order__id=5d4bca55f89ef24280f4c146=${order__id}`
               })
               // t.toast(`查看助力情况${foo.title}`)
             }
