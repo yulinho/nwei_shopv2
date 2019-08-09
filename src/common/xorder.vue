@@ -160,6 +160,7 @@ export default {
 }
 .main_product_content_des_subtitle_1_cls{
   flex: 1;
+  font-size: 0.8em;
 }
 .main_product_content_des_title_1_cls{
   flex: 1;
