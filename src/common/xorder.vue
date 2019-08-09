@@ -123,7 +123,7 @@ export default {
 }
 .main_navis_button_cls{
   margin-left: 20rpx;
-  min-width: 200rpx;
+  min-width: 150rpx;
 }
 .main_marginer_cls{
   /*height: 15rpx;*/
