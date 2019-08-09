@@ -115,6 +115,7 @@ export default {
     let res_order = await t.v2dispatch({
       type: `v2chuqidanopen`,
       payload: {
+        product,
         chuqidanitem__id: product._id,
         chuqidanuser__id: user__id,
         nsp: `preorder`
