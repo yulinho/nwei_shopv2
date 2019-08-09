@@ -1,6 +1,11 @@
 const timeFormat = 'YYYY-MM-DD HH:mm:ss';
 const dateFormat = 'YYYY-MM-DD';
 const Tools = {
+  sleep: async (args) => {
+    return new Promise(async (resolve) => {
+      
+    })
+  },
   fetch: async (args) => {
     return new Promise(async (resolve) => {
       // that.setState(state, resolve)
