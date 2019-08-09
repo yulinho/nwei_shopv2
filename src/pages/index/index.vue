@@ -69,7 +69,8 @@ export default {
   },
   methods: {
     async onclickbulltin(){
-      t.alert('所有帮你助力过的朋友，他自己领取后，你都有0.5元的奖励, 上不封顶。')
+      // t.alert('所有帮你助力过的朋友，他自己领取后，你都有0.5元的奖励, 上不封顶。')
+      t.alert(`帮您助力过的朋友，他自己领取产品，您将获得0.5元的推广奖励，上不封顶！`)
     },
     async onclickitem(item) {
       // t.toast('onclickitem')
