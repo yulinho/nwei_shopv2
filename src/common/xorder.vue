@@ -22,6 +22,9 @@
         
       </div>
     </div>
+    <div class="main_postfee_cls">
+      <span>运费:12</span>
+    </div>
   </div>
 </template>
 <script>
