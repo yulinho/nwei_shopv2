@@ -132,16 +132,13 @@ export default {
   async onReady(e) {},
   async onShow() {
     let user = await t.getItem('user')
-    while(!user){
+    while (!user) {
       user = await t.getItem('user')
-    }
-    if (user) {
-      await ctx.refreshOrder({
-        user
-      })
-    }else{
       await t.sleep(1000)
     }
+    await ctx.refreshOrder({
+      user
+    })
     // let product = await t.getItem('product')
     // let res_order = await t.v2dispatch({
     //   type: `v2chuqidanopen`,
