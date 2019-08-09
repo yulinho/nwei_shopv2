@@ -15,6 +15,8 @@
       </div>
       <div class="main_content_status_cls">
         <span class="main_content_status_span_cls">{{args.statusFE}}</span>
+      </div>
+      <div>
         <button type="warning" size="mini">马上助力</button>
       </div>
     </div>
