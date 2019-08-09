@@ -112,10 +112,6 @@ export default {
   flex: 1;
   background-color: white;
 }
-.main_product_cls{
-  background-color: #f5f6f7;
-  /*background-color: green;*/
-}
 .main_postfee_cls{
   padding: 20rpx;
   text-align: right;
@@ -193,6 +189,7 @@ export default {
   padding-right: 20rpx;
   padding-top: 10rpx;
   padding-bottom: 10rpx;
+  background-color: #f5f6f7;
   /*background-color: red;*/
 }
 .main_content_icon_cls {
