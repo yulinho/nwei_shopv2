@@ -95,6 +95,9 @@ export default {
   /*background-color: #f5f6f7;*/
   background-color: green;
 }
+.main_postfee_cls{
+  padding: 20rpx;
+}
 .main_product_content_cls{
   /*width: 200rpx;*/
   /*margin: 20rpx;*/
