@@ -74,7 +74,7 @@ export default {
       // console.log(data);
       for (let foo of data) {
         let buttons = []
-        if (foo.status.FE=='已发货') {
+        if (foo.statusFE=='已发货') {
           buttons.push({
               {
                 title: '查看物流',
@@ -84,7 +84,7 @@ export default {
               }
           })
         }
-        if (foo.status.FE=='待支付') {
+        if (foo.statusFE=='待支付') {
           buttons.push({
               {
                 title: '支付',
