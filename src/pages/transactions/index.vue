@@ -34,7 +34,7 @@ export default {
   async onShow() {
     ctx = this
     // t.toast('show2')
-    await ctx.fetchOrders()
+    // await ctx.fetchOrders()
     // this.onShow()
 
     // const { userInfo } = await t.getUserInfo({
