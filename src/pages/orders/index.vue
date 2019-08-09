@@ -109,7 +109,10 @@ export default {
             title:  `马山助力`,
             type: `warn`,
             click: ()=>{
-              t.toast('且力助')
+              t.open({
+                url: `/pages/free/main?order__id=${order__id}`
+              })
+              // t.toast('且力助')
             }
           }
         }
