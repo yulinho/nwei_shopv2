@@ -36,7 +36,8 @@
         </div>
         <div class="main_content_inner_zhuli_recordslist_ls">
           <div class="main_content_inner_zhuli_recordslist_item_ls" v-for="(item,index) in helpers" :key="index" v-if="helpers.length>0">
-            <image class="main_content_inner_zhuli_recordslist_item_image_ls" src="http://qiniu.heyulin.cn/who.png"></image>
+            <image v-if="!item.headimg" class="main_content_inner_zhuli_recordslist_item_image_ls" src="http://qiniu.heyulin.cn/who.png"></image>
+            <image v-if="item.headimg" class="main_content_inner_zhuli_recordslist_item_image_ls" :src="item.headimg"></image>
             <div class="is-size-4 main_content_inner_zhuli_recordslist_item_title_ls">
               <span v-if="!item.nick">匿名好友</span>
               <span v-if="item.nick">{{item.nick}}</span>
