@@ -53,7 +53,11 @@ If you want to help us out, you are more than welcome to. However please make su
 
 [`nwei_shopv2` is BSD-licensed](LICENSE). We also provide an additional [patent grant](PATENTS).
 
-Have fun! ok! 
+Have fun! 
+
+## Buy me a cup of Tea
+  - <img src="screenshots/mywechatpay.jpg"  width="320" />
+
 
 
 
