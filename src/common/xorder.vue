@@ -153,6 +153,12 @@ export default {
   background-color: pink;
   flex: 1;
 }
+.main_product_content_des_title_cls{
+
+}
+.main_product_content_des_subtitle_cls{
+  color: gray;
+}
 .main_product_content_des_title_1_cls{
   flex: 1;
 }
