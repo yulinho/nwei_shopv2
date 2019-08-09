@@ -73,7 +73,9 @@ export default {
       let { data } = res_products
       // console.log(data);
       for (let foo of data) {
-          ctx.orders.push(foo)
+          ctx.orders.push({
+            ...foo,
+          })
       }
       
       // ctx.products = data
