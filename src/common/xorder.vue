@@ -115,6 +115,7 @@ export default {
 }
 .main_product_cls{
   margin-left: 20rpx;
+  background-color: red;
 }
 .main_content_icon_cls {
   display: flex;
