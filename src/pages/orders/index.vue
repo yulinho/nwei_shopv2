@@ -78,7 +78,7 @@ export default {
           buttons.push({
                 title: '查看物流',
                 click: ()=>{
-                  t.toast(`物流${foo.title}`)
+                  // t.toast(`物流${foo.title}`)
                 }
           })
         }
