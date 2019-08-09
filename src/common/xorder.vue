@@ -114,7 +114,7 @@ export default {
 }
 .main_product_cls{
   /*background-color: #f5f6f7;*/
-  background-color: green;
+  /*background-color: green;*/
 }
 .main_postfee_cls{
   padding: 20rpx;
