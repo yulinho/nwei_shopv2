@@ -188,6 +188,7 @@ export default {
   methods: {
     async refreshOrder(args) {
       let { user } = args
+      let order__id = ctx.order__id
       let res_ordegetr = await t.v2dispatch({
         type: `v2chuqidanopen`,
         payload: {
