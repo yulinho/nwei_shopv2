@@ -117,7 +117,7 @@ export default {
   flex-direction: row;
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .main_marginer_cls{
   /*height: 15rpx;*/
