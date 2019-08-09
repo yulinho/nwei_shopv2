@@ -91,6 +91,10 @@ export default {
 .main_product_cls{
   background-color: #f5f6f7;
 }
+.main_product_content_cls{
+  width: 100rpx;
+  height: 100rpx;
+}
 .main_content_cls {
   /*background-color: blue;*/
   margin-left: 20rpx;
