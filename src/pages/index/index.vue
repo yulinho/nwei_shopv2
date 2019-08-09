@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     async onclickbulltin(){
-      
+      t.alert('所有您分享出去的宝贝，别人领取后，您都有0.5元的奖励, 上不封顶。')
     },
     async onclickitem(item) {
       // t.toast('onclickitem')
