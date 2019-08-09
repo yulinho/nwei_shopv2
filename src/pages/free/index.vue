@@ -52,19 +52,16 @@
         </div>
       </div>
     </div>
-
     <div class="is-main_ctrlbar_ls">
       <div class="is-main_ctrlbar_content_ls">
         <button class="is-main_ctrlbar_content_icon_ls is-center is-plain-button" @click="onclickgotoindex">
           <div class="iconfont is-size-1">&#xe60f;</div>
           <div class="is-size-5">回到首页</div>
         </button>
-
       </div>
       <div class="is-main_touchbar_ls" v-if="isIpx">
       </div>
     </div>
-
   </div>
 </template>
 <script>
@@ -179,8 +176,40 @@ export default {
     }
   },
   methods: {
-    async onclickgotoindex(){
-      
+    async refreshOrder() {
+      let res_ordegetr = await t.v2dispatch({
+        type: `v2chuqidanopen`,
+        payload: {
+          localuser: user,
+          chuqidanorder__id: order__id,
+          nsp: `order_get`
+        },
+      })
+      let chuqidanorder = res_ordegetr.data
+      let { chuqidanuser__id } = chuqidanorder
+      ctx.chuqidanorder = chuqidanorder
+      ctx.helped_cnt = chuqidanorder.helpers.length
+      ctx.helpstatus = chuqidanorder.helpstatus
+      ctx.helpers = chuqidanorder.helpers
+
+      let product = res_ordegetr.product
+      console.log(product);
+      await t.setItem('product', product)
+      ctx.product = product
+
+      // console.log(chuqidanorder);
+      // t.toast(user._id);
+      // console.log(chuqidanuser__id);
+      if (`${user._id}` == chuqidanuser__id) {
+        //自己订单
+        ctx.ownerorder = true
+      } else {
+        //帮别人加速
+        ctx.ownerorder = false
+      }
+    },
+    async onclickgotoindex() {
+
       wx.reLaunch({
         url: '/pages/index/main'
       })
@@ -404,7 +433,5 @@ export default {
   width: 750rpx;
   height: 1110rpx;
 }
-
-
 
 </style>
