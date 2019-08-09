@@ -6,7 +6,7 @@
     <div class="main_slider_ls">
       <image class="main_slider_image_ls" src="http://qiniu.heyulin.cn/h5baisongde_topbanner2_tiny.png"></image>
     </div>
-    <div class="main_bulltin_ls" v-if="false">
+    <div class="main_bulltin_ls">
     </div>
     <div class="main_blocks_ls" v-if="false">
       <div class="main_blocks_item_ls" v-for="(item,index) in products" :key="index">
