@@ -32,8 +32,8 @@
       
     </div>
     <div class="main_navis_cls">
-      <button size="mini">查看物流</button>
-      <button size="mini">支付</button>
+      <button class="main_navis_button_cls" size="mini">查看物流</button>
+      <button class="main_navis_button_cls" size="mini">支付</button>
     </div>
     <div class="main_marginer_cls" style="height: 15rpx;">
       
@@ -120,6 +120,9 @@ export default {
   /*justify-content: center;*/
   align-items: flex-end;
   text-align: right;
+}
+.main_navis_button_cls{
+
 }
 .main_marginer_cls{
   /*height: 15rpx;*/
