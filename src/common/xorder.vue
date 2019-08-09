@@ -92,8 +92,8 @@ export default {
   background-color: #f5f6f7;
 }
 .main_product_content_cls{
-  width: 100rpx;
-  height: 100rpx;
+  width: 200rpx;
+  height: 200rpx;
   background-color: blue;
 }
 .main_content_cls {
