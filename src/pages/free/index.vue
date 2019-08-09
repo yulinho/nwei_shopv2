@@ -134,6 +134,7 @@ export default {
     let user = await t.getItem('user')
     while (!user) {
       user = await t.getItem('user')
+      console.log(`###$sleeping wait the user infomation####`);
       await t.sleep(1000)
     }
     await ctx.refreshOrder({
