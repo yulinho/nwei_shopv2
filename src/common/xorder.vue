@@ -22,7 +22,7 @@
     </div>
     <div class="main_product_cls">
       <div class="main_product_content_cls">
-        
+        <image src="https://hz.heyulin.com/public/tinypng/5d49b96ece2b3c6bfbbf4bb8-headimg-15651670305160.7110244005016229-tiny.png" class="main_product_content_image_cls"></image>
       </div>
     </div>
     <div class="main_postfee_cls">
@@ -134,6 +134,10 @@ export default {
   /*margin: 20rpx;*/
   height: 200rpx;
   background-color: blue;
+}
+.main_product_content_image_cls{
+  width: 200rpx;
+  height: 200rpx;
 }
 .main_content_cls {
   /*background-color: blue;*/
