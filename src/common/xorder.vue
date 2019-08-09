@@ -117,6 +117,9 @@ export default {
 }
 .main_navis_cls{
   flex-direction: row;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .main_marginer_cls{
   /*height: 15rpx;*/
