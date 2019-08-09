@@ -68,6 +68,9 @@ export default {
     // 若否，则允许新建拼单
   },
   methods: {
+    async onclickbulltin(){
+      
+    },
     async onclickitem(item) {
       // t.toast('onclickitem')
       await t.setItem('product',item)
