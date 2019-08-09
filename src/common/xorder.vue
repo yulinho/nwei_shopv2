@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="main_postfee_cls">
-      <span>价格:0(运费:12)</span>
+      <span>价格:0 (运费:12)</span>
     </div>
     <div class="main_marginer_cls" style="height: 2rpx;">
       
