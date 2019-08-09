@@ -113,7 +113,9 @@ export default {
   display: flex;
   align-items: center;
 }
-
+.main_product_cls{
+  margin-left: 20rpx;
+}
 .main_content_icon_cls {
   display: flex;
   align-items: center;
