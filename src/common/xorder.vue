@@ -28,6 +28,9 @@
     <div class="main_navis_cls">
       
     </div>
+    <div class="main_marginer_cls">
+      
+    </div>
   </div>
 </template>
 <script>
@@ -105,6 +108,9 @@ export default {
 .main_navis_cls{
   margin-top: 1px;
   margin-bottom: 15rpx;
+}
+.main_marginer_cls{
+  height: 15rpx;
 }
 .main_product_content_cls{
   /*width: 200rpx;*/
