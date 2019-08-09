@@ -89,7 +89,8 @@ export default {
   background-color: white;
 }
 .main_product_cls{
-  background-color: #f5f6f7;
+  /*background-color: #f5f6f7;*/
+  background-color: green;
 }
 .main_product_content_cls{
   /*width: 200rpx;*/
