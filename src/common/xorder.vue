@@ -116,7 +116,7 @@ export default {
   padding: 20rpx;
   flex-direction: row;
   /*align-items: center;*/
-  display: flex;
+  /*display: flex;*/
   /*justify-content: center;*/
 }
 .main_marginer_cls{
