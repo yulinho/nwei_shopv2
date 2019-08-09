@@ -131,6 +131,12 @@ export default {
   computed: {},
   async onReady(e) {},
   async onShow() {
+    let user = await t.getItem('user')
+    if (user) {
+      await ctx.refreshOrder({
+        user
+      })
+    }
     // let product = await t.getItem('product')
     // let res_order = await t.v2dispatch({
     //   type: `v2chuqidanopen`,
@@ -177,7 +183,7 @@ export default {
   },
   methods: {
     async refreshOrder(args) {
-      let {user} = args
+      let { user } = args
       let res_ordegetr = await t.v2dispatch({
         type: `v2chuqidanopen`,
         payload: {
