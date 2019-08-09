@@ -115,6 +115,7 @@ export default {
 .main_navis_cls{
   /*margin-top: 1px;*/
   /*margin-bottom: 15rpx;*/
+  padding: 20rpx;
 }
 .main_navis_cls{
   flex-direction: row;
