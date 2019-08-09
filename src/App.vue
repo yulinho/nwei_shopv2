@@ -3,7 +3,97 @@ import t from 't';
 export default {
   async onLaunch(args) {
     let { query, } = args
-    console.log(`###$query####`,query);
+    // console.log(`###$query####`,query);
+    let { order__id } = query
+    wx.getSystemInfo({
+      success: async function(res) {
+        let rate = res.windowWidth / 750
+        await t.setItem('rate', rate)
+        var name = 'iPhone X'
+        if (res.model.indexOf(name) > -1) {
+          await t.setItem('isIpx', true)
+        } else {
+          await t.setItem('isIpx', false)
+        }
+        let isFirst = await t.getItem('isFirst')
+        if (!isFirst) {
+          // 是第一次使用，展示说明并设置storage
+          // this.showDialog = true
+          await t.setItem('isFirst', false)
+        }
+        let isNeedWxLogin = false
+        let user = await t.getItem('user')
+        if (!user) {
+          isNeedWxLogin = true
+        } else {
+          wx.checkSession({
+            success() {
+              //session_key 未过期，并且在本生命周期一直有效
+              console.log(`###$session_key 未过期，并且在本生命周期一直有效####`);
+            },
+            fail() {
+              // session_key 已经失效，需要重新执行登录流程
+              // wx.login() //重新登录
+              isNeedWxLogin = true
+            }
+          })
+        }
+        console.log(`###$isNeedWxLogin####`, isNeedWxLogin);
+        if (isNeedWxLogin) {
+          wx.login({
+            async success(res) {
+              if (res.code) {
+                console.log(res);
+                let code = res.code
+                //发起网络请求
+                let res_products = await t.v2dispatch({
+                  type: `v2chuqidanopen`,
+                  payload: {
+                    // chuqidanitem__id: `chuqidanitem__id`,
+                    // chuqidanuser__id: user__id,
+                    code,
+                    nsp: `wxloginsuccess`
+                  },
+                })
+                let { user } = res_products
+                await t.setItem(`user`, user)
+                await t.setItem(`wxOpenid`, user.wxOpenid)
+              } else {
+                console.log('登录失败！' + res.errMsg)
+              }
+            }
+          })
+        }
+        // let userUnid = await t.getItem('userUnid')
+        // if (!userUnid) {
+        //   await t.setItem('userUnid', `${new Date().valueOf()}${Math.random()}`)
+        // }
+        // let user = await t.getItem(`user`)
+        // let mdl = {}
+        // if (user) {
+        //   mdl = {
+        //     _id,
+        //     userUnid,
+        //   }
+        // } else {
+        //   mdl = {
+        //     userUnid,
+        //   }
+        // }
+        // let res_user = await t.v2dispatch({
+        //   type: `v2chuqidanopen`,
+        //   payload: {
+        //     mdl: {
+        //       ...mdl,
+        //     },
+        //     nsp: `syncuser`
+        //   },
+        // })
+        // // console.log(res_user);
+        // user = res_user.data
+        // await t.setItem(`user`, user)
+      }
+    })
   },
   async created(query) {},
   methods: {},
@@ -14,6 +104,7 @@ export default {
 page {
   background-color: #ececec;
 }
+
 .container {
   height: 100%;
   display: flex;
@@ -31,6 +122,7 @@ page {
   -webkit-transition: width 2s;
   -o-transition: width 2s;
 }
+
 @font-face {
   font-family: 'iconfont';
   /* project id 1316788 */
@@ -190,7 +282,8 @@ page {
   -webkit-transition: width 2s;
   -o-transition: width 2s;
 }
-.is-no-record{
+
+.is-no-record {
   display: flex;
   background-color: white;
   align-items: center;
@@ -199,10 +292,12 @@ page {
   color: gray;
   font-size: 28rpx;
 }
+
 .is-main_touchbar_ls {
   height: 60rpx;
   width: 750rpx;
 }
+
 .is-main_ctrlbar_ls {
   width: 750rpx;
   background-color: white;
@@ -210,6 +305,7 @@ page {
   bottom: 0;
   left: 0;
 }
+
 .is-main_ctrlbar_content_ls {
   width: 750rpx;
   height: 120rpx;
@@ -217,6 +313,7 @@ page {
   flex-direction: row;
   display: flex;
 }
+
 .is-main_ctrlbar_content_icon_ls {
   width: 120rpx;
   height: 120rpx;
@@ -224,6 +321,7 @@ page {
   flex-direction: column;
   line-height: 35rpx;
 }
+
 .is-main_ctrlbar_content_button2_ls {
   /*padding-top: 20rpx;*/
   flex: 1;
@@ -237,4 +335,5 @@ page {
   border-radius: 0;
   padding: 0;
 }
+
 </style>
