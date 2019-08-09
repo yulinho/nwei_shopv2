@@ -28,7 +28,7 @@
             <span class="main_product_content_des_title_1_cls">title</span><span>price</span>
           </div>
           <div class="main_product_content_des_subtitle_cls">
-            subtitle
+            <span class="main_product_content_des_subtitle_1_cls">subtitle</span><span>x1</span>
           </div>
         </div>
       </div>
@@ -159,6 +159,10 @@ export default {
 }
 .main_product_content_des_subtitle_cls{
   color: gray;
+  display: flex;
+}
+.main_product_content_des_subtitle_1_cls{
+  flex: 1;
 }
 .main_product_content_des_title_1_cls{
   flex: 1;
