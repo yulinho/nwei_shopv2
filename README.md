@@ -31,6 +31,8 @@ under coding..
   - 
   - <img src="screenshots/4.png"  width="320" />
   - 
+  - <img src="screenshots/6.jpg"  width="320" />
+  - 
 
 ## Getting Started
 To get the project set up just run by command:
