@@ -5,7 +5,7 @@
         <span v-html="args.icon"></span>
       </div>
       <div class="main_content_title_cls">
-        {{args.title}}xx店
+        {{args.title}}官方自营店
       </div>
       <div class="main_content_subtitle_cls">
         {{args.subtitle}}
