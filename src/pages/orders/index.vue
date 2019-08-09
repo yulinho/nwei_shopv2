@@ -75,6 +75,21 @@ export default {
       for (let foo of data) {
           ctx.orders.push({
             ...foo,
+            buttons:[
+              {
+                title: '查看物流',
+                click: ()=>{
+                  t.toast('查看物流')
+                }
+              },
+              {
+                title: '支付',
+                type: `primary`,
+                click: ()=>{
+                  t.toast('支付')
+                }
+              }
+            ]
           })
       }
       
