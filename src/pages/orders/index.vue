@@ -97,7 +97,7 @@ export default {
           // await t.setItem('order__id',order__id)
           buttons.push({
             title: '查看助力情况',
-            type: `primary`,
+            type: `warn`,
             click: () => {
               t.open({
                 url: `/pages/free/main?order__id=${order__id}`
