@@ -1,7 +1,7 @@
 <template>
   <div class="main_cls">
     <div class="main_cls" v-if="orders.length>0">
-      <xorder :args="{}"></xorder>
+      <xorder :args="{}" v-for="(item,index) in orders" :key="index"></xorder>
     </div>
     <div class="is-no-record" v-if="orders.length==0">
       <span>暂无纪录</span>
