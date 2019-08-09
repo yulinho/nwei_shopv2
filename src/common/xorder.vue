@@ -119,6 +119,7 @@ export default {
 .main_product_cls{
   /*margin-left: 20rpx;*/
   padding-left: 20rpx;
+  padding-top: 10rpx;
   background-color: red;
 }
 .main_content_icon_cls {
