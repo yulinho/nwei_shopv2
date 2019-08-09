@@ -107,10 +107,11 @@ export default {
 }
 .main_navis_cls{
   margin-top: 1px;
-  margin-bottom: 15rpx;
+  /*margin-bottom: 15rpx;*/
 }
 .main_marginer_cls{
   height: 15rpx;
+  background-color: #f5f6f7;
 }
 .main_product_content_cls{
   /*width: 200rpx;*/
