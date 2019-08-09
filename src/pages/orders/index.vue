@@ -80,7 +80,6 @@ export default {
                 click: ()=>{
                   t.toast(`物流${foo.title}`)
                 }
-              }
           })
         }
         if (foo.statusFE=='待支付') {
