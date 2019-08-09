@@ -132,8 +132,9 @@ export default {
 
 .main_bulltin_ls {
   /*width: 750rpx;*/
-  height: 60rpx;
-  padding-left: 20rpx;
+  /*height: 60rpx;*/
+  /*padding-left: 20rpx;*/
+  padding: 20rpx;
   /*background-color: green;*/
 }
 
