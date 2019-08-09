@@ -58,6 +58,9 @@ export default {
     async onclickget() {
       t.toast('onclickget')
     },
+    async paysubmit(){
+      t.toast(`支付接口申请中，敬请期待`)
+    },
     async fetchOrders() {
       console.log(`###$fetchProductOrder####`);
       let user = await t.getItem('user')
@@ -106,7 +109,7 @@ export default {
                     if (res_setted.user) {
                       await t.setItem('user', res_setted.user)
                       // ctx.user = res_setted.user
-                      t.toast('支付接口申请中，敬请期待')
+                      ctx.paysubmit({})
                     }
                     // console.log(res.userName)
                     // console.log(res.postalCode)
@@ -119,7 +122,7 @@ export default {
                   }
                 })
               } else {
-                t.toast('支付接口申请中，敬请期待')
+                ctx.paysubmit({})
               }
             }
           })
