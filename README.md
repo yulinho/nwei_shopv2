@@ -55,7 +55,7 @@ If you want to help us out, you are more than welcome to. However please make su
 
 Have fun! 
 
-## Buy me a cup of Tea
+## 送作者一杯茶
   - <img src="screenshots/mywechatpay.jpg"  width="320" />
 
 
