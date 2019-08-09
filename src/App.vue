@@ -51,6 +51,7 @@ export default {
                   payload: {
                     // chuqidanitem__id: `chuqidanitem__id`,
                     // chuqidanuser__id: user__id,
+                    order__id,
                     code,
                     nsp: `wxloginsuccess`
                   },
