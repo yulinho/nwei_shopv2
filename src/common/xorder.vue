@@ -113,11 +113,7 @@ export default {
   text-align: right;
 }
 .main_navis_cls{
-  /*margin-top: 1px;*/
-  /*margin-bottom: 15rpx;*/
   padding: 20rpx;
-}
-.main_navis_cls{
   flex-direction: row;
   align-items: center;
   display: flex;
