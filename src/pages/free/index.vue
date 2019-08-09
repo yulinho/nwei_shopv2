@@ -187,6 +187,7 @@ export default {
   },
   methods: {
     async refreshOrder(args) {
+      console.log(`###$refreshOrder####`);
       let { user } = args
       let order__id = ctx.order__id
       let res_ordegetr = await t.v2dispatch({
