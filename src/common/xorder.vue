@@ -144,6 +144,7 @@ export default {
 .main_product_content_image_cls{
   width: 200rpx;
   height: 200rpx;
+  margin-right: 10rpx;
 }
 .main_product_content_des_cls{
   /*background-color: pink;*/
