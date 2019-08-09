@@ -115,10 +115,9 @@ export default {
 .main_navis_cls{
   padding: 20rpx;
   flex-direction: row;
-  align-items: center;
+  /*align-items: center;*/
   display: flex;
-  justify-content: center;
-  text-align: right;
+  /*justify-content: center;*/
 }
 .main_marginer_cls{
   /*height: 15rpx;*/
