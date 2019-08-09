@@ -4,6 +4,7 @@
     "pages/my/main",
     "pages/orders/main",
     "pages/item/main",
+    "pages/transactions/main",
     "pages/free/main"
   ],
   "permission":
