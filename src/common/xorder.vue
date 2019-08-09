@@ -25,7 +25,7 @@
         <image :src="args.pict_url" class="main_product_content_image_cls"></image>
         <div class="main_product_content_des_cls">
           <div class="main_product_content_des_title_cls">
-            <span class="main_product_content_des_title_1_cls">title</span><span>price</span>
+            <span class="main_product_content_des_title_1_cls">{{args.title}}</span><span>{{args.dealprice}}</span>
           </div>
           <div class="main_product_content_des_subtitle_cls">
             <span class="main_product_content_des_subtitle_1_cls">subtitle</span><span>x1</span>
