@@ -25,6 +25,9 @@
     <div class="main_postfee_cls">
       <span>价格:0(运费:12)</span>
     </div>
+    <div class="main_navis_cls">
+      
+    </div>
   </div>
 </template>
 <script>
@@ -98,6 +101,10 @@ export default {
 .main_postfee_cls{
   padding: 20rpx;
   text-align: right;
+}
+.main_navis_cls{
+  margin-top: 1px;
+  margin-bottom: 15rpx;
 }
 .main_product_content_cls{
   /*width: 200rpx;*/
