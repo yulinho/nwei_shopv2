@@ -115,7 +115,7 @@ export default {
 .main_navis_cls{
   padding: 20rpx;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   justify-content: center;
 }
