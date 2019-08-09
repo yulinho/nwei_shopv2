@@ -193,7 +193,7 @@ export default {
   padding-right: 20rpx;
   padding-top: 10rpx;
   padding-bottom: 10rpx;
-  background-color: red;
+  /*background-color: red;*/
 }
 .main_content_icon_cls {
   display: flex;
