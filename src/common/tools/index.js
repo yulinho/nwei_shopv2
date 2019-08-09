@@ -155,7 +155,8 @@ const Tools = {
       message = typeof(arg1)
     }
     wx.showModal({
-      title: message,
+      title: '提示',
+      content: message,
       // icon,
       // duration,
       // icon: `success`
