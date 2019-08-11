@@ -6,7 +6,7 @@
     <div class="main_slider_ls">
       <image class="main_slider_image_ls" src="http://qiniu.heyulin.cn/h5baisongde_topbanner2_tiny.png"></image>
     </div>
-    <div class="main_bulltin_ls">
+    <div class="main_bulltin_ls" v-if="ifshowbulltin">
       <span @click="onclickbulltin">活动: 自己免费领，别人领您有奖励。查看说明。</span>
     </div>
     <div class="main_blocks_ls" v-if="false">
@@ -42,6 +42,7 @@ export default {
   },
   data() {
     return {
+      ifshowbulltin: false,
       products: [],
       items: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
       q: ``,
@@ -93,9 +94,10 @@ export default {
           nsp: `salesproducts_get`
         },
       })
-      let { data } = res_products
+      let { data,ifshowbulltin } = res_products
       // console.log(data);
       ctx.products = data
+      ctx.ifshowbulltin = ifshowbulltin
     },
   },
   async onLoad(query) {},

@@ -59,7 +59,29 @@ export default {
       t.toast('onclickget')
     },
     async paysubmit(args){
-      t.toast(`支付接口申请中，敬请期待`)
+      // t.toast(`支付接口申请中，敬请期待`)
+      let {data} = args
+      let user = await t.getItem('user')
+      t.wait('正在发起支付')
+      let openid = user.wxOpenid
+      let ispayok = await t.wxpay({
+        method: 'WXPAY',
+        title: '邮费',
+        tid: data._id,
+        // tid: `test_${new Date().valueOf()}`,
+        amt: 12,
+        openid,
+      })
+      t.ok()
+      if (ispayok) {
+        t.toast('支付成功，我们将尽快为您发货')
+        // await this.onRefresh('event_refersh_trades', 'true')
+        // const url = '../trades/main'
+        // wx.navigateTo({ url })
+      }else{
+        t.toast('支付失败，请到我的订单查询')
+      }
+      // console.log(data);
     },
     async fetchOrders() {
       console.log(`###$fetchProductOrder####`);
@@ -109,7 +131,9 @@ export default {
                     if (res_setted.user) {
                       await t.setItem('user', res_setted.user)
                       // ctx.user = res_setted.user
-                      ctx.paysubmit({})
+                      ctx.paysubmit({
+                        data: foo,
+                      })
                     }
                     // console.log(res.userName)
                     // console.log(res.postalCode)
@@ -122,7 +146,9 @@ export default {
                   }
                 })
               } else {
-                ctx.paysubmit({})
+                ctx.paysubmit({
+                  data: foo,
+                })
               }
             }
           })

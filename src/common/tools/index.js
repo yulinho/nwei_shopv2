@@ -1,13 +1,65 @@
 const timeFormat = 'YYYY-MM-DD HH:mm:ss';
 const dateFormat = 'YYYY-MM-DD';
 const Tools = {
+  wxpay: async (args) => {
+    return new Promise(async (resolve) => {
+      console.log(`###$pay####`);
+      let { amt, openid, tid, title } = args
+      let nsp = 'wxpaypre_get'
+      let res = await Tools.v2dispatch({
+        type: 'v2chuqidanopen',
+        payload: {
+          // stype,
+          // item: item,
+          // user_id,
+          // stype: this.stype,
+          // page_no,
+          // q,
+          title,
+          tid,
+          openid,
+          amt,
+          nsp,
+          t: Math.random(),
+        },
+      })
+      // console.log(res);
+      if (!res) {
+        Tools.toast('支付失败')
+      }
+      // let payargs = res[`${nsp}_response`].payargs
+      let payargs = res.data
+      // console.log(payargs);
+      wx.requestPayment({
+        // timeStamp: '',
+        // nonceStr: '',
+        // package: '',
+        // signType: 'MD5',
+        // paySign: '',
+        ...payargs,
+        success(res) {
+          console.log(res);
+          Tools.toast('支付成功')
+          // Tools.toast(res)
+          resolve(true)
+        },
+        fail(res) {
+          console.log(res);
+          resolve(false)
+        }
+      })
+    })
+
+    // console.log(quanmaobrands);
+    // this.quanmaobrands = quanmaobrands
+  },
   sleep: async (args) => {
     return new Promise(async (resolve) => {
       setTimeout(function() {
         resolve({
           success: true,
         })
-      }, args) 
+      }, args)
     })
   },
   fetch: async (args) => {

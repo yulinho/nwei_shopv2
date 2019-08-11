@@ -102,7 +102,7 @@ export default {
   computed: {},
   async onReady(e) {},
   async onShow() {
-    let product= await t.getItem('product')
+    let product = await t.getItem('product')
     ctx.mdl = product
     // t.toast('show3')
     // console.log(app);
@@ -154,8 +154,39 @@ export default {
     }
   },
   methods: {
-    async onclickbuynow(){
-      t.toast('微信支付申请中，此功能即将开放')
+    async onclickbuynow() {
+      // t.toast('微信支付申请中，此功能即将开放')
+      let user = await t.getItem('user')
+      t.wait('正在创建订单')
+      let user__id = user._id
+      let res_products = await t.v2dispatch({
+        type: `v2chuqidanopen`,
+        payload: {
+          product: ctx.mdl,
+          chuqidanuser__id: user__id,
+          nsp: `order_make`
+        },
+      })
+      // t.toast(res_products)
+      let order = res_products.data
+      let openid = user.wxOpenid
+      let ispayok = await t.wxpay({
+        method: 'WXPAY',
+        title: '邮费',
+        tid: order._id,
+        // tid: `test_${new Date().valueOf()}`,
+        amt: 12+order.dealprice,
+        openid,
+      })
+      t.ok()
+      if (ispayok) {
+        t.toast('支付成功，我们将尽快为您发货')
+        // await this.onRefresh('event_refersh_trades', 'true')
+        // const url = '../trades/main'
+        // wx.navigateTo({ url })
+      } else {
+        t.toast('支付失败，请到我的订单查询')
+      }
     },
     async onclickgotoindex() {
 
@@ -264,16 +295,19 @@ export default {
   height: 750rpx;
   /*background-color: red;*/
 }
-.main_pict_swiper_ls{
+
+.main_pict_swiper_ls {
   width: 750rpx;
   height: 750rpx;
 
 }
-.main_pict_swiper_img_ls{
+
+.main_pict_swiper_img_ls {
   width: 750rpx;
   height: 750rpx;
 
 }
+
 .main_pict_pic_ls {
   width: 750rpx;
   height: 750rpx;
