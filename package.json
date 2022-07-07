@@ -22,7 +22,7 @@
     "lerp": "^1.0.3",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
-    "moment": "^2.23.0",
+    "moment": "^2.29.4",
     "mpvue": "^1.0.11",
     "mpvue-weui": "^1.0.4",
     "mpvue-zanui": "^1.0.3",
